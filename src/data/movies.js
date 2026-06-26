@@ -1,0 +1,33 @@
+export const continueWatching = [
+  { id: 1, title: "Oppenheimer", rating: 8.9, image: "/assets/images/lanjutfilm.png", meta: "Episode 4 • 42m tersisa", progress: 65 },
+  { id: 2, title: "Squid Game S2", rating: 8.0, image: "/assets/images/lanjutfilm.png", meta: "Episode 6 • 55m tersisa", progress: 20 },
+  { id: 3, title: "Dune: Part Two", rating: 8.5, image: "/assets/images/lanjutfilm.png", meta: "1j 12m tersisa", progress: 28 },
+  { id: 4, title: "The Bear S3", rating: 9.0, image: "/assets/images/lanjutfilm.png", meta: "Episode 3 • 28m tersisa", progress: 80 },
+]
+
+export const topRated = [
+  { id: 5, title: "Breaking Bad", rating: 9.5, image: "/assets/images/toprating.png", meta: "Series", rank: 1 },
+  { id: 6, title: "Inception", rating: 8.8, image: "/assets/images/toprating.png", meta: "Film", rank: 2 },
+  { id: 7, title: "Peaky Blinders", rating: 8.8, image: "/assets/images/toprating.png", meta: "Series", rank: 3 },
+  { id: 8, title: "The Godfather", rating: 9.2, image: "/assets/images/toprating.png", meta: "Film", rank: 4 },
+  { id: 9, title: "Stranger Things", rating: 8.7, image: "/assets/images/toprating.png", meta: "Series", rank: 5 },
+  { id: 10, title: "Dark", rating: 8.8, image: "/assets/images/toprating.png", meta: "Series", rank: 6 },
+]
+
+export const trending = [
+  { id: 11, title: "Poor Things", rating: 8.0, image: "/assets/images/trending.png", meta: "2023" },
+  { id: 12, title: "Civil War", rating: 7.6, image: "/assets/images/trending.png", meta: "2024" },
+  { id: 13, title: "Furiosa", rating: 7.9, image: "/assets/images/trending.png", meta: "2024" },
+  { id: 14, title: "Kingdom of Planet of the Apes", rating: 7.1, image: "/assets/images/trending.png", meta: "2024" },
+  { id: 15, title: "Inside Out 2", rating: 7.7, image: "/assets/images/trending.png", meta: "2024" },
+  { id: 16, title: "Inside Out 2", rating: 7.7, image: "/assets/images/trending.png", meta: "2024" },
+]
+
+export const newReleases = [
+  { id: 17, title: "Alien: Romulus", rating: 7.4, image: "/assets/images/rilisbaru.png", meta: "2024" },
+  { id: 18, title: "Longlegs", rating: 5.9, image: "/assets/images/rilisbaru.png", meta: "2024" },
+  { id: 19, title: "Twisters", rating: 7.2, image: "/assets/images/rilisbaru.png", meta: "2024" },
+  { id: 20, title: "Trap", rating: 6.6, image: "/assets/images/rilisbaru.png", meta: "2024" },
+  { id: 21, title: "Deadpool & Wolverine", rating: 8.0, image: "/assets/images/rilisbaru.png", meta: "2024" },
+  { id: 22, title: "Borderlands", rating: 3.2, image: "/assets/images/rilisbaru.png", meta: "2024" },
+]
