@@ -23,10 +23,10 @@ export default function MovieCard({ variant = 'default', title, rating, image, m
 
       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35
                       flex items-center justify-center transition-all duration-[250ms]">
-        <div className="w-12 h-12 bg-white/95 rounded-full flex items-center justify-center
+        <div className="w-12 h-12 bg-white/95 text-black rounded-full flex items-center justify-center
                         opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100
                         transition-all duration-[250ms]">
-          <Icon name="play" size={20} />
+          <Icon name="play" size={20}/>
         </div>
       </div>
 
