@@ -4,6 +4,7 @@ import Icon from '../base/Icon'
 
 export default function MovieCard({ variant = 'default', title, rating, image, meta, progress, badge, rank }) {
   return (
+    // Fixed width variants to ensure consistent layout in carousel
     <article className={`rounded-lg overflow-hidden cursor-pointer bg-[#1a1a26] group relative
                          transition-all duration-[250ms] hover:scale-[1.04] hover:-translate-y-1
                          hover:shadow-[0_16px_40px_rgba(0,0,0,0.6)]

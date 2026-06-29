@@ -7,6 +7,7 @@ export default function ProfileDropdown({ mobile }) {
 
   useEffect(() => {
     function handleClick(e) {
+      // Close dropdown if click is outside ref element
       if (ref.current && !ref.current.contains(e.target)) {
         setIsOpen(false)
       }
@@ -27,28 +28,36 @@ export default function ProfileDropdown({ mobile }) {
       >
         <span className="w-7 h-7 rounded-full bg-gradient-to-br from-[#4b5563] to-[#9ca3af]
                          flex items-center justify-center overflow-hidden shrink-0">
-          <Icon name="profile" size={16} />
+          <img src="/assets/images/profile.png" alt="" />
         </span>
         {!mobile && <span className="text-sm font-medium text-white/92">Akun</span>}
         {!mobile && <Icon name="chevron-right" size={14} className="text-white/70 rotate-90" />}
       </button>
 
       {isOpen && (
-        <div className={`absolute top-full bg-[#14141c]/95 backdrop-blur-xl border border-white/10
+        <div
+        role="menu" 
+        className={`absolute top-full bg-[#14141c]/95 backdrop-blur-xl border border-white/10
                          rounded-xl min-w-[200px] p-2 z-50 shadow-[0_10px_40px_rgba(0,0,0,0.5)]
                          transition-all duration-200
                          ${mobile ? 'left-0 right-0 mt-2' : 'right-0 mt-2'}`}>
-          <a href="#" className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-[#f1f0f5]
+          <a href="#"
+          role="menuitem" 
+          className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-[#f1f0f5]
                                  hover:bg-[#7c3aed]/20 hover:text-[#c084fc] transition-colors">
             <Icon name="profile" size={18} />
             <span>Profil Saya</span>
           </a>
-          <a href="#" className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-[#f1f0f5]
+          <a href="#"
+          role="menuitem" 
+          className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-[#f1f0f5]
                                  hover:bg-[#7c3aed]/20 hover:text-[#c084fc] transition-colors">
             <Icon name="star" size={18} />
             <span>Ubah Premium</span>
           </a>
-          <a href="#" className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-[#f1f0f5]
+          <a href="#"
+          role="menuitem" 
+          className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-[#f1f0f5]
                                  hover:bg-[#7c3aed]/20 hover:text-[#c084fc] transition-colors">
             <Icon name="logout" size={18} />
             <span>Keluar</span>

@@ -1,5 +1,6 @@
 export default function AuthCard({ title, subtitle, children }) {
   return (
+    // Fixed min-height ensures content doesn't jump during form state changes
     <div className="bg-[#181a1c]/30 border border-[#0d0d0f] rounded-3xl p-10
                     w-full max-w-[529px] min-h-[663px] mx-auto
                     shadow-[0_4px_24px_rgba(0,0,0,0.5),0_0_60px_rgba(24,26,28,0.3)]">

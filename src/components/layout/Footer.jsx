@@ -5,6 +5,7 @@ const GENRES = ['Aksi','Drama','Komedi','Sains & Alam','Anak-anak','Fantasi Ilmi
 const BANTUAN = ['FAQ','Kontak Kami','Privasi','Syarat & Ketentuan']
 
 export default function Footer() {
+  // Toggle states for mobile accordion functionality
   const [genreOpen, setGenreOpen] = useState(false)
   const [bantuanOpen, setBantuanOpen] = useState(false)
 
@@ -58,6 +59,8 @@ export default function Footer() {
           {/* Genre accordion */}
           <button
             onClick={() => setGenreOpen(!genreOpen)}
+            aria-expanded={genreOpen}
+            aria-controls='genre-menu'
             className="flex items-center justify-between w-full py-4 border-b border-[#2a2a3d]
                        text-base font-semibold text-[#f1f0f5] bg-transparent"
           >
@@ -67,7 +70,7 @@ export default function Footer() {
                               ${genreOpen ? 'rotate-90' : ''}`} />
           </button>
           {genreOpen && (
-            <div className="flex flex-col gap-3 py-4">
+            <div id="genre-menu" className="flex flex-col gap-3 py-4">
               {GENRES.map(g => (
                 <a key={g} href="#" className="text-sm text-[#9b99ab]">{g}</a>
               ))}
@@ -77,6 +80,8 @@ export default function Footer() {
           {/* Bantuan accordion */}
           <button
             onClick={() => setBantuanOpen(!bantuanOpen)}
+            aria-expanded={bantuanOpen}
+            aria-controls='bantuan-menu'
             className="flex items-center justify-between w-full py-4 border-b border-[#2a2a3d]
                        text-base font-semibold text-[#f1f0f5] bg-transparent"
           >
@@ -86,7 +91,7 @@ export default function Footer() {
                               ${bantuanOpen ? 'rotate-90' : ''}`} />
           </button>
           {bantuanOpen && (
-            <div className="flex flex-col gap-3 py-4">
+            <div id="genre-menu" className="flex flex-col gap-3 py-4">
               {BANTUAN.map(b => (
                 <a key={b} href="#" className="text-sm text-[#9b99ab]">{b}</a>
               ))}

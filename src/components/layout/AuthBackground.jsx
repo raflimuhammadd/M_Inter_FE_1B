@@ -1,6 +1,7 @@
 export default function AuthBackground({ image }) {
   return (
     <>
+      {/* Decorative radial gradients for background depth */}
       <div className="fixed top-[-100px] right-[-100px] w-[500px] h-[500px]
                       bg-[radial-gradient(circle,rgba(124,58,237,0.12)_0%,transparent_70%)]
                       pointer-events-none z-0" />

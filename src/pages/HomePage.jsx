@@ -7,6 +7,7 @@ import { continueWatching, topRated, trending, newReleases } from '../data/movie
 export default function HomePage() {
   return (
     <HomeLayout>
+      {/* Hero data is passed directly; no API fetch in this version */}
       <Hero
         title="Duty After School"
         description="Sebuah benda tak dikenal mengambil alih dunia. Dalam keputusasaan, Departemen Pertahanan mulai merekrut lebih banyak tentara, termasuk siswa sekolah menengah. Mereka pun segera menjadi pejuang garis depan dalam perang."
@@ -24,6 +25,7 @@ export default function HomePage() {
         ))}
       </CardSection>
 
+      {/* Alternating dark bg for section separation */}
       <div className="bg-[#16161f]">
         <CardSection title="Top Rating" highlight="Hari Ini" linkText="Lihat semua" linkTo="#">
           {topRated.map(m => (

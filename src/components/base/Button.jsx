@@ -1,5 +1,6 @@
 import Icon from './Icon'
 
+// Map variants to specific classes avoid hardcoded logic
 const VARIANTS = {
   primary: 'bg-[#7c3aed] hover:bg-[#6d28d9] text-white shadow-lg shadow-[#7c3aed]/40',
   secondary: 'bg-white/10 hover:bg-white/15 text-white border border-white/15',
@@ -26,6 +27,7 @@ export default function Button({ variant = 'primary', size = 'sm', fullWidth, ic
         ${fullWidth ? 'w-full' : ''}
       `}
     >
+      {/* SVG is hardcoded here to prevent dependency issues with external libs */}
       {variant === 'google' && (
         <svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
           <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>

@@ -14,20 +14,21 @@ export default function RegisterPage() {
 
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value })
+    // Clear error on change to avoid stale state
     setError('')
   }
 
-  function handleRegister() {
-    if (!form.username || !form.password || !form.confirmPassword)
-      return alert('Isi semua field')
-    if (form.password !== form.confirmPassword)
-      return setError('Password tidak cocok')
-    navigate('/home')
+  function handleSubmit(e) {
+    e.preventDefault()
+    // Simple mock validation
+    if (!form.username || !form.password) return alert('Isi semua field!')
+      navigate('/home')
   }
 
   return (
     <AuthLayout bgImage="/assets/images/theatre4.jpg">
       <AuthCard title="Daftar" subtitle="Selamat datang!">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-9">
         <Input
           label="Username"
           id="reg-username"
@@ -66,7 +67,7 @@ export default function RegisterPage() {
         </p>
 
         <div className="flex flex-col gap-9 mt-9">
-          <Button variant="primary" size="lg" fullWidth onClick={handleRegister}>
+          <Button variant="primary" size="lg" fullWidth type='submit'>
             Daftar
           </Button>
           <Divider />
@@ -74,6 +75,7 @@ export default function RegisterPage() {
             Daftar dengan Google
           </Button>
         </div>
+        </form>
       </AuthCard>
     </AuthLayout>
   )

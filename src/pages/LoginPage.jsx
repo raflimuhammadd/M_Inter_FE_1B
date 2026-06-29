@@ -15,14 +15,17 @@ export default function LoginPage() {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  function handleLogin() {
-    if (!form.username || !form.password) return alert('Isi semua field')
-    navigate('/home')
+  function handleSubmit(e) {
+    e.preventDefault()
+    // Simple mock validation
+    if (!form.username || !form.password) return alert('Isi semua field!')
+      navigate('/home')
   }
 
   return (
     <AuthLayout bgImage="/assets/images/theatre3.jpg">
       <AuthCard title="Masuk" subtitle="Selamat Datang Kembali!">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-9">
         <Input
           label="Username"
           id="login-username"
@@ -55,7 +58,7 @@ export default function LoginPage() {
         </div>
 
         <div className="flex flex-col gap-9 mt-9">
-          <Button variant="primary" size="lg" fullWidth onClick={handleLogin}>
+          <Button variant="primary" size="lg" fullWidth type='submit'>
             Masuk
           </Button>
           <Divider />
@@ -63,6 +66,7 @@ export default function LoginPage() {
             Masuk dengan Google
           </Button>
         </div>
+        </form>
       </AuthCard>
     </AuthLayout>
   )
