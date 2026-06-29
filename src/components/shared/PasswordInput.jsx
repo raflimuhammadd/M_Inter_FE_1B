@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Icon from '../base/Icon'
 
 export default function PasswordInput({ label, id, name, placeholder, value, onChange, autoComplete }) {
+  // Local state to toggle visibility without exposing to form parent
   const [showPassword, setShowPassword] = useState(false)
 
   return (

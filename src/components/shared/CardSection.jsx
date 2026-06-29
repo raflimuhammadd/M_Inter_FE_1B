@@ -7,6 +7,7 @@ export default function CardSection({ title, highlight, linkText, linkTo, childr
 
   function scroll(direction) {
     if (!scrollRef.current) return
+    // Use fixed scroll amount to mimic standard carousel
     const amount = direction === 'left' ? -300 : 300
     scrollRef.current.scrollBy({ left: amount, behavior: 'smooth' })
   }
@@ -34,13 +35,14 @@ export default function CardSection({ title, highlight, linkText, linkTo, childr
                        bg-black/40 backdrop-blur-sm border border-[#7c3aed]/40 rounded-full
                        flex items-center justify-center text-white hover:bg-[#7c3aed]/35
                        transition-all"
-            aria-label="Scroll left"
+            aria-label="Scroll right"
           >
             <img src="/assets/images/arrow-left.png" alt="" className="w-5 h-5" />
           </button>
           <div
             ref={scrollRef}
             className="flex gap-4 overflow-x-auto scrollbar-hide pb-2"
+            // Hide scrollbar while maintaining functional scrolling
             style={{ scrollbarWidth: 'none' }}
           >
             {children}
