@@ -7,7 +7,7 @@ const NAV_ITEMS = [
   { to: '/home',      icon: 'home',   label: 'Beranda' },
   { to: '/series',    icon: 'series', label: 'Series' },
   { to: '/film',      icon: 'film',   label: 'Film' },
-  { to: '/daftar-saya', label: 'Daftar Saya' },
+  { to: '/daftar-saya', icon: 'list', label: 'Daftar Saya' },
 ]
 
 export default function Header() {
@@ -16,11 +16,17 @@ export default function Header() {
 
   useEffect(() => {
     function onScroll() {
+      // Toggle sticky header styles on scroll threshold
       setIsScrolled(window.scrollY > 20)
+
+      // Auto-close mobile drawer if user scrolls
+      if (isMobileNavOpen) {
+        setIsMobileNavOpen(false)
+      }
     }
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  }, [isMobileNavOpen])
 
   return (
     <header
@@ -34,11 +40,11 @@ export default function Header() {
       <div className="flex items-center justify-between w-full max-w-[1280px] mx-auto">
         {/* Left: Logo + Nav */}
         <div className="flex items-center gap-6 min-w-0 flex-1">
-          <Link to="/home" className="flex items-center gap-[-4px] font-black text-[1.125rem] tracking-tight text-[#f1f0f5]">
-            <span className="w-20 h-7 flex shrink-0 overflow-hidden">
-              <img src="/assets/images/chill-vect.png" alt="" className="w-20 h-7 object-contain ml-9" />
+          <Link to="/home" className="flex items-center gap-1 h-11 w-fit font-black text-[1.125rem] tracking-tight text-[#f1f0f5]">
+            <span className="h-7 flex shrink-0 overflow-hidden">
+              <img src="/assets/images/chill-vect.png" alt="" className="h-7 w-auto object-contain" />
             </span>
-            <span className="font-['Londrina_Solid',cursive] text-[1.75rem]">CHILL</span>
+            <span className="hidden lg:inline font-['Londrina_Solid',cursive] text-[2.35rem]">CHILL</span>
           </Link>
 
           {/* Desktop Nav */}
@@ -92,10 +98,19 @@ export default function Header() {
 
       {/* Mobile nav drawer */}
       {isMobileNavOpen && (
-        <nav className="lg:hidden absolute top-[calc(4rem+6px)] left-4 right-4
-                        bg-[#101012]/96 backdrop-blur-2xl border border-white/[0.08]
-                        rounded-[18px] z-[99] flex flex-col p-3
-                        shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
+        <>
+        <div
+          className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[98] lg:hidden"
+          onClick={() => setIsMobileNavOpen(false)}
+          aria-hidden="true"
+        />
+        <nav className={`lg:hidden fixed top-16 left-4 right-4
+              bg-[#101012] backdrop-blur-2xl
+              border border-white/[0.08] rounded-[18px]
+              z-[99] flex flex-col p-3 shadow-lg
+              transition-all-duration-300
+              ${isMobileNavOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 translate-y-2 invisible pointer-events-none'}
+            `}>
           {NAV_ITEMS.map(item => (
             <NavLink
               key={item.to}
@@ -118,6 +133,7 @@ export default function Header() {
             <ProfileDropdown mobile />
           </div>
         </nav>
+        </>
       )}
     </header>
   )

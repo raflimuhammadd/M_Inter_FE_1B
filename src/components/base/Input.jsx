@@ -14,6 +14,7 @@ export default function Input({ label, id, name, type = 'text', placeholder, val
         value={value}
         onChange={onChange}
         autoComplete={autoComplete}
+        // Fixed height [50px] prevents layout shifts when focused
         className="bg-[#1e1e2c] border border-[#333350] rounded-2xl text-[#f1f0f5]
                    px-4 py-3 w-full h-[50px] outline-none
                    focus:border-[#7c3aed] focus:shadow-[0_0_0_3px_rgba(124,58,237,0.15)]
