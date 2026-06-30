@@ -70,7 +70,7 @@ logout: (
   'arrow-right': <path d="M5 12h14M12 5l7 7-7 7" strokeWidth="2.5" />,
 }
 
-export default function Icon({ name, size = 18 }) {
+export default function Icon({ name, size = 20 }) {
   return (
     <svg
       viewBox="0 0 24 24"
