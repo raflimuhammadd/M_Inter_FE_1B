@@ -15,10 +15,10 @@ export default function Hero({ title, description, rating, year, duration, genre
       </div>
 
       <div className="relative z-10 max-w-[1280px] mx-auto px-10 w-full">
-        <div className="inline-flex items-center gap-1.5 bg-[#7c3aed]/20 border border-[#7c3aed]/35
+        <div className="inline-flex items-center gap-1.5 bg-[#0F1E93]/20 border border-[#7c3aed]/35
                         rounded-full px-3.5 py-1.5 text-xs font-bold tracking-wider uppercase
-                        text-[#c084fc] mb-4">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#c084fc] animate-[pulse_2s_ease_infinite]" />
+                        text-[#E7E3FCDE] mb-4">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#0586FF] animate-[pulse_2s_ease_infinite]" />
           {badgeText}
         </div>
 

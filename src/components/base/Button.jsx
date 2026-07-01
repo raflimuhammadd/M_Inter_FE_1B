@@ -2,7 +2,7 @@ import Icon from './Icon'
 
 // Map variants to specific classes avoid hardcoded logic
 const VARIANTS = {
-  primary: 'bg-[#7c3aed] hover:bg-[#6d28d9] text-white shadow-lg shadow-[#7c3aed]/40',
+  primary: 'bg-[#0F1E93] hover:bg-[#0367DB] active:bg-[#024DB7] text-white shadow-lg shadow-[#7c3aed]/40',
   secondary: 'bg-white/10 hover:bg-white/15 text-white border border-white/15',
   google: 'bg-transparent hover:bg-white/10 text-white border border-[#333350]',
   ghost: 'bg-transparent hover:border-[#a78bfa] hover:text-[#a78bfa] text-white border border-[#2a2a3d]',
@@ -20,7 +20,7 @@ export default function Button({ variant = 'primary', size = 'sm', fullWidth, ic
       onClick={onClick}
       className={`
         inline-flex items-center justify-center gap-2
-        rounded-2xl font-semibold leading-none
+        rounded-3xl font-semibold leading-none
         transition-all duration-200 whitespace-nowrap
         ${VARIANTS[variant]}
         ${SIZES[size]}
