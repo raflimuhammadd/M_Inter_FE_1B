@@ -16,7 +16,7 @@ export default function HomePage() {
         duration="2j 49m"
         genres="Sci-Fi • Drama"
         image="/assets/images/beranda.png"
-        badgeText="Siap Nonton"
+        badgeText="Watch Now"
       />
 
       <CardSection title="Lanjutkan" highlight="Menonton" linkText="Lihat semua" linkTo="#">

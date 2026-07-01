@@ -48,11 +48,11 @@ export default function LoginPage() {
         <div className="flex items-center justify-between gap-4 mt-[-10px]">
           <p className="text-sm text-[#9b99ab]">
             Belum punya akun?{' '}
-            <Link to="/register" className="text-[#a78bfa] font-semibold hover:text-[#c084fc] transition-colors">
+            <Link to="/register" className="text-[#e9e6ff] font-semibold hover:text-[#0367DB] transition-colors">
               Daftar sekarang
             </Link>
           </p>
-          <a href="#" className="text-sm text-[#a78bfa] hover:text-[#c084fc] transition-colors">
+          <a href="#" className="text-sm text-[#e9e6ff] hover:text-[#0367DB] transition-colors">
             Lupa kata sandi?
           </a>
         </div>
