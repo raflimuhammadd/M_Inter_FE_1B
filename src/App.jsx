@@ -1,7 +1,10 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import LoginPage from './pages/LoginPage'
-import RegisterPage from './pages/RegisterPage'
-import HomePage from './pages/HomePage'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import HomePage from './pages/HomePage';
+import SeriesPage from './pages/SeriesPage';
+import FilmsPage from './pages/FilmsPage';
+import WatchListPage from './pages/WatchListPage';
 
 export default function App() {
   return (
@@ -10,8 +13,11 @@ export default function App() {
         <Route path="/" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/home" element={<HomePage />} />
+        <Route path="/series" element={<SeriesPage />} />
+        <Route path="/films" element={<FilmsPage />} />
+        <Route path="/watch-list" element={<WatchListPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }

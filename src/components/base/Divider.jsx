@@ -6,5 +6,5 @@ export default function Divider({ text = 'atau' }) {
       {text}
       <span className="flex-1 h-px bg-[#2a2a3d]" />
     </div>
-  )
+  );
 }

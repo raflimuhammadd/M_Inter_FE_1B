@@ -1,15 +1,21 @@
-import { useRef } from 'react'
-import { Link } from 'react-router-dom'
-import Icon from '../base/Icon'
+import { useRef } from 'react';
+import { Link } from 'react-router-dom';
+import Icon from '../base/Icon';
 
-export default function CardSection({ title, highlight, linkText, linkTo, children }) {
-  const scrollRef = useRef(null)
+export default function CardSection({
+  title,
+  highlight,
+  linkText,
+  linkTo,
+  children,
+}) {
+  const scrollRef = useRef(null);
 
   function scroll(direction) {
-    if (!scrollRef.current) return
+    if (!scrollRef.current) return;
     // Use fixed scroll amount to mimic standard carousel
-    const amount = direction === 'left' ? -300 : 300
-    scrollRef.current.scrollBy({ left: amount, behavior: 'smooth' })
+    const amount = direction === 'left' ? -300 : 300;
+    scrollRef.current.scrollBy({ left: amount, behavior: 'smooth' });
   }
 
   return (
@@ -37,7 +43,11 @@ export default function CardSection({ title, highlight, linkText, linkTo, childr
                        transition-all"
             aria-label="Scroll right"
           >
-            <img src="/assets/images/arrow-left.png" alt="" className="w-5 h-5" />
+            <img
+              src="/assets/images/arrow-left.png"
+              alt=""
+              className="w-5 h-5"
+            />
           </button>
           <div
             ref={scrollRef}
@@ -55,10 +65,14 @@ export default function CardSection({ title, highlight, linkText, linkTo, childr
                        transition-all"
             aria-label="Scroll right"
           >
-            <img src="/assets/images/arrow-right.png" alt="" className="w-5 h-5" />
+            <img
+              src="/assets/images/arrow-right.png"
+              alt=""
+              className="w-5 h-5"
+            />
           </button>
         </div>
       </div>
     </section>
-  )
+  );
 }

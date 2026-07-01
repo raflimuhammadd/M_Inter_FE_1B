@@ -1,4 +1,13 @@
-export default function Input({ label, id, name, type = 'text', placeholder, value, onChange, autoComplete }) {
+export default function Input({
+  label,
+  id,
+  name,
+  type = 'text',
+  placeholder,
+  value,
+  onChange,
+  autoComplete,
+}) {
   return (
     <div className="flex flex-col gap-1.5">
       {label && (
@@ -21,5 +30,5 @@ export default function Input({ label, id, name, type = 'text', placeholder, val
                    placeholder:text-[#5c5a70] transition-all duration-200"
       />
     </div>
-  )
+  );
 }
