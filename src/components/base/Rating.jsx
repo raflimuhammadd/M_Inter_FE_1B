@@ -1,4 +1,4 @@
-import Icon from './Icon'
+import Icon from './Icon';
 
 export default function Rating({ score }) {
   return (
@@ -7,5 +7,5 @@ export default function Rating({ score }) {
       <Icon name="star" size={11} />
       {score}
     </span>
-  )
+  );
 }
