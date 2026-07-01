@@ -17,10 +17,10 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <a href="#" className="inline-flex items-center gap-2 font-black text-[1.125rem] tracking-tight text-[#f1f0f5]">
-              <span className="w-[50px] h-8 flex shrink-0">
-                <img src="/assets/images/chill-vect.png" alt="" className="w-[50px] h-8 object-contain" />
+              <span className=" h-7 flex shrink-0 overflow-hidden">
+                <img src="/assets/images/chill-vect.png" alt="" className="h-7 object-contain" />
               </span>
-              <span className="font-['Londrina_Solid',cursive] text-[1.75rem]">CHILL</span>
+              <span className="font-['Londrina_Solid',cursive] text-[3rem]">CHILL</span>
             </a>
             <p className="text-sm text-[#5c5a70] mt-3 leading-relaxed">@2026 Chill All Rights Reserved</p>
           </div>

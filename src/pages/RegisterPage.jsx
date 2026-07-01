@@ -61,7 +61,7 @@ export default function RegisterPage() {
 
         <p className="text-sm text-[#9b99ab] mt-[-10px]">
           Sudah punya akun?{' '}
-          <Link to="/" className="text-[#a78bfa] font-semibold hover:text-[#c084fc] transition-colors">
+          <Link to="/" className="text-[#e9e6ff] font-semibold hover:text-[#0367DB] transition-colors">
             Masuk
           </Link>
         </p>

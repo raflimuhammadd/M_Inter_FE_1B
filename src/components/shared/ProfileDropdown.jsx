@@ -37,28 +37,28 @@ export default function ProfileDropdown({ mobile }) {
       {isOpen && (
         <div
         role="menu" 
-        className={`absolute top-full bg-[#14141c]/95 backdrop-blur-xl border border-white/10
+        className={`absolute top-full bg-[#181A1C]/95 backdrop-blur-xl border border-white/10
                          rounded-xl min-w-[200px] p-2 z-50 shadow-[0_10px_40px_rgba(0,0,0,0.5)]
                          transition-all duration-200
                          ${mobile ? 'left-0 right-0 mt-2' : 'right-0 mt-2'}`}>
           <a href="#"
           role="menuitem" 
-          className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-[#f1f0f5]
-                                 hover:bg-[#7c3aed]/20 hover:text-[#c084fc] transition-colors">
+          className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-[#ffffff]
+                                hover:text-[#3254FF] transition-colors">
             <Icon name="profile" size={18} />
             <span>Profil Saya</span>
           </a>
           <a href="#"
           role="menuitem" 
-          className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-[#f1f0f5]
-                                 hover:bg-[#7c3aed]/20 hover:text-[#c084fc] transition-colors">
+          className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-[#ffffff]
+                                 hover:text-[#3254FF] transition-colors">
             <Icon name="star" size={18} />
             <span>Ubah Premium</span>
           </a>
           <a href="#"
           role="menuitem" 
           className="flex items-center gap-3 px-4 py-3 rounded-lg text-sm text-[#f1f0f5]
-                                 hover:bg-[#7c3aed]/20 hover:text-[#c084fc] transition-colors">
+                                hover:text-[#3254FF] transition-colors">
             <Icon name="logout" size={18} />
             <span>Keluar</span>
           </a>
